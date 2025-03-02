@@ -1,0 +1,3 @@
+DEFAULT_FOLDER = klor/2040
+
+SERIAL_DRIVER = vendor
