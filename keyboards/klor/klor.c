@@ -23,6 +23,11 @@ oled_rotation_t oled_init_kb(oled_rotation_t rotation) {
 }
 
 
+//#ifdef HAPTIC_ENABLE
+//#include "drivers/haptic/DRV2605L.h"
+//#endif //HAPTIC ENABLE
+
+
 #ifdef SWAP_HANDS_ENABLE
 
 __attribute__ ((weak))
@@ -227,6 +232,3 @@ void suspend_wakeup_init_kb(void) {
     suspend_wakeup_init_user();
 }
 #endif //RGB_MATRIX_ENABLE
-
-
-

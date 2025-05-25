@@ -28,11 +28,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // ┌─────────────────────────────────────────────────┐
 // │ s p l i t   c o m m u n i c a t i o n           │
 // └─────────────────────────────────────────────────┘
-
+//
 #define SERIAL_USE_MULTI_TRANSACTION
-//#define SPLIT_LAYER_STATE_ENABLE
+#define SPLIT_LAYER_STATE_ENABLE
 //#define SPLIT_USB_DETECT
-
+//
+#define I2C_DRIVER I2CD1
+#define I2C_SLAVE_ENABLE
+#define I2C1_CLOCK_SPEED 400000
 
 // ┌─────────────────────────────────────────────────┐
 // │ o l e d s                                       │
@@ -41,7 +44,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifdef OLED_ENABLE
 #    define OLED_DISPLAY_128X64
 #    define SPLIT_OLED_ENABLE
-#    define OLED_FONT_H  "./lib/glcdfont.c"
 #endif
 
 
@@ -62,15 +64,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    define RGB_MATRIX_STARTUP_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS
 #    define RGB_DISABLE_WHEN_USB_SUSPENDED
 #    define RGB_MATRIX_KEYPRESSES
-#endif
-
-// ┌─────────────────────────────────────────────────┐
-// │ t r a c k b a l l                               │
-// └─────────────────────────────────────────────────┘
-
-#ifdef POINTING_DEVICE_ENABLE
-#    define PAW3204_SCLK_PIN D0
-#    define PAW3204_SDIO_PIN D1
-#    define POINTING_DEVICE_AUTO_MOUSE_ENABLE
-#    define AUTO_MOUSE_DELAY 300
 #endif

@@ -10,6 +10,7 @@
     },
     "features": {
         "oled": true
+        "pointing_device": true,
     },
     "matrix_pins": {
         "cols": ["GP14", "GP13", "GP22", "GP20", "GP23", "GP21"],
@@ -25,6 +26,7 @@
     "split": {
         "enabled": true,
         "serial": {
+            "driver": "vendor"
             "pin": "GP1"
         },
     },
