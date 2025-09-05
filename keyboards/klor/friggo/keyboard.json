@@ -13,14 +13,14 @@
         "pointing_device": true,
     },
     "matrix_pins": {
-        "cols": ["GP14", "GP13", "GP22", "GP20", "GP23", "GP21"],
-        "rows": ["GP5", "GP12", "GP7", "GP8"]
+        "cols": ["GP27", "GP26", "GP22", "GP20", "GP23", "GP21"],
+        "rows": ["GP5", "GP6", "GP7", "GP8"]
     },
     "diode_direction": "COL2ROW",
     "encoder": {
         "enabled": true,
         "rotary": [
-            { "pin_a": "GP16", "pin_b": "GP15", "resolution": 2 }
+            { "pin_a": "GP29", "pin_b": "GP28", "resolution": 2 }
         ]
     },
     "split": {

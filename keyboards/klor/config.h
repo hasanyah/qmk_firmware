@@ -16,7 +16,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #pragma once
-/*#include "config_common.h"*/
 
 // ┌─────────────────────────────────────────────────┐
 // │ m c u   s e t t i n g s                         │
