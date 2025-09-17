@@ -1,0 +1,118 @@
+#pragma once
+
+#define MASTER_LEFT
+
+#define VIAL_KEYBOARD_UID {0xBA, 0x38, 0x22, 0x3F, 0x8C, 0x42, 0x0F, 0x44}
+
+/* VIAL secure unlock keystroke - currently both big keys (typ. SPACE/ENTER) */
+/*#define VIAL_UNLOCK_COMBO_ROWS {4, 9}*/
+/*#define VIAL_UNLOCK_COMBO_COLS {4, 4}*/
+
+#define RGB_MATRIX_FRAMEBUFFER_EFFECTS
+#define RGB_MATRIX_KEYPRESSES
+
+#undef LOCKING_SUPPORT_ENABLE
+#undef LOCKING_RESYNC_ENABLE
+
+#ifndef ONESHOT_TAP_TOGGLE
+#define ONESHOT_TAP_TOGGLE 2  /* Tapping this number of times holds the key until tapped once again. */
+#define ONESHOT_TIMEOUT 5000  /* Time (in ms) before the one shot key is released */
+#endif
+
+#define PERMISSIVE_HOLD
+#define CHORDAL_HOLD
+#define FLOW_TAP_TERM 150
+
+#define DYNAMIC_KEYMAP_LAYER_COUNT 10
+#define TAPPING_FORCE_HOLD
+#undef TAPPING_TERM
+#define TAPPING_TERM 300
+
+#define NO_MUSIC_MODE
+
+#define I2C1_SDA_PIN GP2
+#define I2C1_SCL_PIN GP3
+#define SPLIT_OLED_ENABLE
+#define SPLIT_TRANSPORT_MIRROR
+#define SPLIT_MODS_ENABLE
+
+#ifdef POINTING_DEVICE_ENABLE
+#define SPLIT_POINTING_ENABLE
+#define POINTING_DEVICE_RIGHT
+#define CIRQUE_PINNACLE_DIAMETER_MM 40
+#define CIRQUE_PINNACLE_CURVED_OVERLAY
+#define POINTING_DEVICE_ROTATION_270
+#define CIRQUE_PINNACLE_TAP_ENABLE
+#define CIRQUE_PINNACLE_SECONDARY_TAP_ENABLE
+#define POINTING_DEVICE_GESTURES_SCROLL_ENABLE
+#define CIRQUE_PINNACLE_ATTENUATION EXTREG__TRACK_ADCCONFIG__ADC_ATTENUATE_2X
+#endif
+
+// RGB matrix support
+#ifdef RGB_MATRIX_ENABLE
+#    define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_SOLID_COLOR
+// RGB Matrix Animation modes. Explicitly enabled
+// For full list of effects, see:
+// https://docs.qmk.fm/#/feature_rgb_matrix?id=rgb-matrix-effect
+
+#    define ENABLE_RGB_MATRIX_ALPHAS_MODS
+#    define ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTIWIDE
+#    define ENABLE_RGB_MATRIX_GRADIENT_UP_DOWN
+#    define ENABLE_RGB_MATRIX_GRADIENT_LEFT_RIGHT
+#    define ENABLE_RGB_MATRIX_BREATHING
+#    define ENABLE_RGB_MATRIX_BAND_SAT
+#    define ENABLE_RGB_MATRIX_BAND_VAL
+#    define ENABLE_RGB_MATRIX_BAND_PINWHEEL_SAT
+#    define ENABLE_RGB_MATRIX_BAND_PINWHEEL_VAL
+#    define ENABLE_RGB_MATRIX_BAND_SPIRAL_SAT
+#    define ENABLE_RGB_MATRIX_BAND_SPIRAL_VAL
+#    define ENABLE_RGB_MATRIX_CYCLE_ALL
+#    define ENABLE_RGB_MATRIX_CYCLE_LEFT_RIGHT
+#    define ENABLE_RGB_MATRIX_CYCLE_UP_DOWN
+#    define ENABLE_RGB_MATRIX_RAINBOW_MOVING_CHEVRON
+#    define ENABLE_RGB_MATRIX_CYCLE_OUT_IN
+#    define ENABLE_RGB_MATRIX_CYCLE_OUT_IN_DUAL
+#    define ENABLE_RGB_MATRIX_CYCLE_PINWHEEL
+#    define ENABLE_RGB_MATRIX_CYCLE_SPIRAL
+#    define ENABLE_RGB_MATRIX_DUAL_BEACON
+#    define ENABLE_RGB_MATRIX_RAINBOW_BEACON
+#    define ENABLE_RGB_MATRIX_RAINBOW_PINWHEELS
+#    define ENABLE_RGB_MATRIX_RAINDROPS
+#    define ENABLE_RGB_MATRIX_JELLYBEAN_RAINDROPS
+#    define ENABLE_RGB_MATRIX_HUE_BREATHING
+#    define ENABLE_RGB_MATRIX_HUE_PENDULUM
+#    define ENABLE_RGB_MATRIX_HUE_WAVE
+#    define ENABLE_RGB_MATRIX_PIXEL_RAIN
+#    define ENABLE_RGB_MATRIX_PIXEL_FLOW
+#    define ENABLE_RGB_MATRIX_PIXEL_FRACTAL
+// enabled only if RGB_MATRIX_FRAMEBUFFER_EFFECTS is defined ├─────────────────────────────┐
+#    define ENABLE_RGB_MATRIX_TYPING_HEATMAP
+#    define ENABLE_RGB_MATRIX_DIGITAL_RAIN
+// enabled only of RGB_MATRIX_KEYPRESSES or RGB_MATRIX_KEYRELEASES is defined ├────────────┐
+#    define ENABLE_RGB_MATRIX_SOLID_REACTIVE_SIMPLE
+#    define ENABLE_RGB_MATRIX_SOLID_REACTIVE
+#    define ENABLE_RGB_MATRIX_SOLID_REACTIVE_WIDE
+#    define ENABLE_RGB_MATRIX_SOLID_REACTIVE_CROSS
+#    define ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTICROSS
+#    define ENABLE_RGB_MATRIX_SOLID_REACTIVE_NEXUS
+#    define ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTINEXUS
+#    define ENABLE_RGB_MATRIX_SPLASH
+#    define ENABLE_RGB_MATRIX_MULTISPLASH
+#    define ENABLE_RGB_MATRIX_SOLID_SPLASH
+#    define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
+#endif
+
+// ┌─────────────────────────────────────────────────┐
+// │ h a p t i c   f e e d b a c k                   │
+// └─────────────────────────────────────────────────┘
+
+#ifdef HAPTIC_ENABLE
+#    define FB_ERM_LRA 1
+#    define FB_BRAKEFACTOR 3 // For 1x:0, 2x:1, 3x:2, 4x:3, 6x:4, 8x:5, 16x:6, Disable Braking:7
+#    define FB_LOOPGAIN 1 // For  Low:0, Medium:1, High:2, Very High:3
+#    define RATED_VOLTAGE 2
+#    define V_PEAK 2.8
+#    define V_RMS 2.0
+#    define F_LRA 150 // resonance freq
+#    define DRV_GREETING       alert_750ms
+#endif
