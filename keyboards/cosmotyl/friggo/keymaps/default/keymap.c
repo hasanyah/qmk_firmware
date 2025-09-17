@@ -93,10 +93,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_NAV] = LAYOUT(
-  DF(_NAV),   XXXXXXX,    XXXXXXX,    DF(_BASE),  XXXXXXX,     KC_TILD,    XXXXXXX,    KC_UP,      XXXXXXX,    XXXXXXX,
-  KC_LGUI,    KC_LALT,    KC_LCTL,    KC_LSFT,    XXXXXXX,     KC_SLSH,    KC_LEFT,    KC_DOWN,    KC_RGHT,    XXXXXXX,
-  KC_LEFT,    KC_DOWN,    KC_UP,      KC_RGHT,    XXXXXXX,     KC_DOT,     KC_HOME,    KC_PGDN,    KC_PGUP,    KC_END,
-                          XXXXXXX,    XXXXXXX,    XXXXXXX,     KC_ENT,     XXXXXXX,    RM_TOGG
+  DF(_NAV),   XXXXXXX,    XXXXXXX,    DF(_BASE),  XXXXXXX,     XXXXXXX,    XXXXXXX,    KC_UP,      XXXXXXX,    XXXXXXX,
+  KC_LGUI,    KC_LALT,    KC_LCTL,    KC_LSFT,    XXXXXXX,     XXXXXXX,    KC_LEFT,    KC_DOWN,    KC_RGHT,    XXXXXXX,
+  KC_LEFT,    KC_DOWN,    KC_UP,      KC_RGHT,    XXXXXXX,     KC_DEL,     KC_HOME,    KC_PGDN,    KC_PGUP,    KC_END,
+                          XXXXXXX,    XXXXXXX,    XXXXXXX,     KC_ENT,     XXXXXXX,    XXXXXXX
   ),
 
    [_GAM] = LAYOUT(
@@ -107,7 +107,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  ),
 
    [_MOU] = LAYOUT(
-   XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,      XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    KC_DEL,
+   XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,      XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,
    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,      XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,
    XXXXXXX,    XXXXXXX,    XXXXXXX,    SH_TOGG,    XXXXXXX,      XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,
                            XXXXXXX,    XXXXXXX,    XXXXXXX,      MS_BTN1,    MS_BTN3,    MS_BTN2
